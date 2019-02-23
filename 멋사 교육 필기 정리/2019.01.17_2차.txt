@@ -1,0 +1,28 @@
+myfile = open('김훈.txt','w')  ##write를 사용할시 모든 문자열이 지워
+myfile.write('멋쟁이 사자처럼')
+myfile.close()
+           ## txt문서 안에 write 문자열이 작성됨
+-------------------------------------------------------------------------------
+myfile = open('김훈.txt','r') #read,write,a
+
+for line in mylife:
+print(myfile)
+          ## 파일염
+------------------------------------------------------------------------------
+>>> import time
+>>> time.time()
+1547725788.9812462
+>>> time.ctime()
+'Thu Jan 17 20:50:14 2019'
+>>> time.strftime('%x',time.localtime(time.time()))
+'01/17/19'
+-------------------------------------------------------------------------------
+1~100랜덤수 100개를 뽑고 홀수인 경우 myfile에 저장합니다.
+import random
+random.randint(1,100)
+myfile=open('김훈.txt','w')
+for i in range(1,100):
+    if i%2==1:
+        i=str(i)
+        myfile.write(i+' ')
+myfile.close()

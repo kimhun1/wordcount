@@ -1,0 +1,42 @@
+<head>
+    <!-- 합쳐지고 최소화된 최신 CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    
+    <!-- 부가적인 테마 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    
+    <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+        <title>글자를 세는 페이지를 만들겁니다.</title>
+    </head>
+
+    <div class="container">
+<h1>
+    <span style="color:#92B3B7">
+    당신이 입력한 텍스트는 {{total}} 로 구성되어 있습니다. <!--총 단어 수-->로 구성되어 있습니다! 
+    </span>
+</h1>
+
+<a class="btn btn-default" href="{%url 'home'%}" role="button">다시하기</a>
+<br>
+<h2>
+    <span style="color:#92B3B7">
+    입력한 텍스트 : 
+    </span>
+</h2>
+{{full}}
+
+
+<h2>
+    <span style="color:#92B3B7">
+    단어 카운트 : 
+    </span>
+</h2>
+{% for word, howmany in dictionary%}
+
+{{word}} : {{howmany}}
+<br>
+{%endfor%}
+
+<!--'단어' - '단어가 나온 횟수' -->
+</div>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+<!-- 합쳐지고 최소화된 최신 CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+<!-- 부가적인 테마 -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+<!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <title>글자를 세는 페이지를 만들겁니다.</title>
+</head>
+
+<div class="container">
+<h1>
+    <span style="color:#92B3B7">
+    안녕하세요, 여기서 글자를 세세요!
+</span>
+</h1>
+
+<a class="btn btn-default" href="{%url 'about'%}" role="button">ABOUT</a>
+<br>
+<form action="{%url 'result'%}">
+    <textarea cols="40" rows="10" name="fulltext"></textarea>
+    <br>
+    <!-- Indicates a successful or positive action -->
+    <input type="submit" class="btn btn-success">
+</form>
+</div>
+</html>
